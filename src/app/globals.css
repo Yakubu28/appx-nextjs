@@ -1,0 +1,33 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.scroll-container {
+  overflow: hidden;
+  white-space: nowrap;
+  box-sizing: border-box;
+  animation: scroll 16s linear infinite;
+  animation-direction: alternate;
+}
+
+@keyframes scroll {
+  0% {
+      transform: translateX(100%);
+  }
+
+  100% {
+      transform: translateX(-100%);
+  }
+}
+
+.custom-cursor {
+  cursor: url('/icons/cursor-icon.png') 16 16, auto;
+  transition: all 0.5s ease-in-out;
+}
+
+.custom-cursor:hover {
+  transform: scale(1.05); /* Add a scaling effect on hover */
+}
